@@ -1,47 +1,55 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs 'NodeJS-24'
+    }
+
     stages {
 
-        stage('Clone') {
+        stage('Checkout') {
             steps {
-                echo 'Cloning GitHub repository...'
+                echo 'Cloning EkleClean from GitHub...'
                 checkout scm
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                echo 'Installing dependencies...'
-                bat 'npm install'
-                bat 'cd frontend && npm install'
-                bat 'cd backend && npm install'
+                echo 'Installing root dependencies...'
+                sh 'npm install'
+
+                echo 'Installing frontend dependencies...'
+                sh 'cd frontend && npm install'
+
+                echo 'Installing backend dependencies...'
+                sh 'cd backend && npm install'
             }
         }
 
         stage('Build Frontend') {
             steps {
-                echo 'Building React frontend...'
-                bat 'cd frontend && npm run build'
+                echo 'Building React/Vite frontend...'
+                sh 'cd frontend && npm run build'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running tests...'
-                // Ajoute ici tes tests lorsque tu en auras
-                echo 'Tests completed'
+                echo 'Running project checks...'
+                sh 'node --version'
+                sh 'npm --version'
             }
         }
     }
 
     post {
         success {
-            echo 'Build SUCCESSFUL!'
+            echo 'EkleClean pipeline completed successfully!'
         }
 
         failure {
-            echo 'Build FAILED!'
+            echo 'EkleClean pipeline failed.'
         }
     }
 }
