@@ -1,0 +1,85 @@
+{
+  "plans": [
+    {
+      "id": "essential",
+      "name": "Forfait Essentiel",
+      "price": 5000,
+      "accent": "blue",
+      "items": [
+        "Lavage",
+        "Séchage",
+        "Repassage léger"
+      ]
+    },
+    {
+      "id": "confort",
+      "name": "Forfait Confort",
+      "price": 10000,
+      "accent": "green",
+      "items": [
+        "Lavage",
+        "Séchage",
+        "Repassage",
+        "Parfum du linge"
+      ]
+    },
+    {
+      "id": "premium",
+      "name": "Forfait Premium",
+      "price": 15000,
+      "accent": "purple",
+      "items": [
+        "Lavage premium",
+        "Séchage délicat",
+        "Repassage parfait",
+        "Parfum du linge",
+        "Pliage soigné"
+      ]
+    }
+  ],
+  "clients": [
+    {
+      "id": "CLI-49839B32",
+      "firstName": "NGUESSAN",
+      "lastName": "ELIEL",
+      "email": "raelisnguessan@gmail.com",
+      "phone": "08284049755",
+      "passwordHash": "cb65709dcd53fcc52e6e45d6949d9f16:d1e220ab37567ca91dfad84f3affdf1db44348b2a30d5547239c11450af96ecd6608366ceeda04581a649df2afd33c5d6f7880371724402f3003cf232971a663",
+      "sessionToken": "client-240c6df6626cb8f2845a0c2801856ff2eae986de5150928e",
+      "createdAt": "2026-09-01T05:55:00.703Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "EKL-2026-0D3E4E",
+      "clientId": "CLI-49839B32",
+      "firstName": "NGUESSAN",
+      "lastName": "ELIEL",
+      "neighborhood": "bassam",
+      "doorNumber": "2141",
+      "phone": "08284049755",
+      "planId": "confort",
+      "planName": "Forfait Confort",
+      "price": 10000,
+      "status": "Collecte",
+      "createdAt": "2026-09-01T06:03:26.201Z",
+      "updatedAt": "2026-09-01T06:04:23.892Z"
+    },
+    {
+      "id": "EKL-2026-2B8341",
+      "clientId": "CLI-49839B32",
+      "firstName": "NGUESSAN",
+      "lastName": "ELIEL",
+      "neighborhood": "sicogi",
+      "doorNumber": "2541",
+      "phone": "08284049755",
+      "planId": "essential",
+      "planName": "Forfait Essentiel",
+      "price": 5000,
+      "status": "Lavage",
+      "createdAt": "2026-09-01T06:02:34.669Z",
+      "updatedAt": "2026-09-01T06:04:36.143Z"
+    }
+  ],
+  "contacts": []
+}
